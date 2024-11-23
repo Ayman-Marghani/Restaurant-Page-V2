@@ -1,0 +1,187 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+}
+input, .btn, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/************************************************************/
+/* Custom properties */
+:root {
+  --orange: #fb8500;
+  --dark-blue: #023047;
+  --light-gray: #f1f5f9;
+
+  --padding-small: 12px;
+  --padding-medium: 24px;
+
+  --gap: 24px;
+
+  --bold-font: 550;
+  --bolder-font: 800;
+
+  --border-radius: 5px;
+}
+/************************************************************/
+/* General Styles */
+body {
+  font-family: tahoma, sans-serif;
+  font-weight: var(--bold-font);
+
+  background-color: var(--light-gray);
+  color: var(--dark-blue);
+
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer
+}
+/************************************************************/
+/* Header Section */
+header {
+  background-color: #fff;
+
+  padding: var(--padding-small);
+}
+
+nav {
+  margin: var(--padding-small);
+
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1,
+h2,
+.btn {
+  font-weight: var(--bolder-font);
+}
+
+.btn {
+  background-color: var(--orange);
+  color: #fff;
+
+  text-decoration: none;
+
+  padding: var(--padding-small) var(--padding-medium);
+
+  border: none;
+  border-radius: 100px;
+}
+/************************************************************/
+/* Content Section */
+#content {
+  margin: var(--padding-medium);
+
+  display: grid;
+  gap: var(--gap);
+}
+/************************************************************/
+/* Home page */
+.homepage-desc {
+  padding: 0 var(--padding-medium);
+}
+
+.homepage-img {
+  max-width: 90%;
+
+  justify-self: center;
+}
+/************************************************************/
+/* Contact page */
+.contact-page-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 1fr;
+  justify-items: stretch;
+  gap: var(--gap);
+}
+
+.contact-page-box {
+  background-color: #fff;
+  
+  padding: var(--padding-medium);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--gap) / 2);
+
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 5px lightgray;
+}
+/************************************************************/
+/* Menu page */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: var(--gap);
+}
+
+.menu-item-card {
+  background-color: #fff;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  border-radius: var(--border-radius);
+  
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+.menu-item-img {
+  width: 100%;
+
+  grid-column: 1 / -1;
+
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.menu-item-title,
+.menu-item-price {
+  margin: var(--padding-small);
+}
+
+.menu-item-title {
+  justify-self: start;
+}
+
+.menu-item-price {
+  font-weight: var(--bolder-font);
+
+  justify-self: end;
+}
