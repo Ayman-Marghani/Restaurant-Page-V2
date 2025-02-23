@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar"
-import HomePageImg from "../assets/img/homepage-img.jpg"
+import ImageCarousel from "../components/ImageCarousel"
 import { useState, useEffect } from "react"
 
 function isRestaurantOpen() {
@@ -28,7 +28,7 @@ function HomePage() {
         <div className="homepage-desc">
         Welcome to &quot;Ayman&apos;s Restaurant&quot; a modern yet cozy restaurant in the heart of the city, where culinary artistry meets fresh, locally sourced ingredients. Our diverse menu, inspired by both local traditions and global flavors, offers something for every palate—from sizzling steaks to delicate sushi rolls. Whether you're here for a quick bite or a romantic dinner, our warm atmosphere and attentive service promise an unforgettable dining experience.
         </div>
-        <img className="homepage-img" src={HomePageImg} alt="Interior of cozy restaurant, loft style stock photo"></img>
+        <ImageCarousel/>
       </div>
     </>
   )
