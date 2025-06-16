@@ -2,6 +2,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import HomePage from './pages/HomePage'
 import MenuPage from './pages/MenuPage'
 import ContactPage from './pages/ContactPage'
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 
@@ -15,7 +16,12 @@ function App() {
     )
   )
   
-  return <RouterProvider router={router}/>
+  return (
+    <>
+      <RouterProvider router={router}/>
+      <Analytics />
+    </>
+  )
 }
 
 export default App
